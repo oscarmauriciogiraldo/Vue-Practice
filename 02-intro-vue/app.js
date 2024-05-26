@@ -13,3 +13,4 @@ const app = createApp ({
     `
 });
 /* EStas lineas de codigo crea la aplicacion en vue */
+app.mount('#myApp')
