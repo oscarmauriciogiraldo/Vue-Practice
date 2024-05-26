@@ -26,3 +26,24 @@
     Composition api es la nueva forma de trabajar en vue, ofrece nuevas funcionalidades 
     que no se pueden trabajar en options api 
 
+#### Hola Mundo Nueva sintaxis vs Antigua sintaxis
+
+    - Antigua sintaxis 
+        
+        const app = Vue.createApp({
+
+        })
+
+    - Nueva Sintaxis 
+
+        const {createApp, ref} = Vue;
+
+        const app = createApp ({
+            //template literals
+            template: `
+                <h1>Hola mundo</h1>
+                <p> desde la app.js <p>
+            `
+        });
+        
+
