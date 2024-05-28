@@ -7,6 +7,21 @@
     LLas funciones en JavaScript son bloques de codigo reutilizables, las cuales otorga un mejor nivel y eficiencia. 
 
     - Una funcion se define como un conjunto de instrucciones logicamente ordenadas, para llevar a cabo una tarea espesifica 
+
+    La grandiosa utilidad de las funciones radica en su capacidad para organizar el codigo, de manera coherente y modular, facilitando su mantenibilidad y posibilitando su reutilizacion. 
+
+    Al utilizar funciones logramos descomponer un problema complejo en tareas mas pequeñas
+
+    Una funcion esta compuesta por 3 elementos
+
+        - Declaracion de la funcion 
+        - Los parametros 
+        - Cuerpo de la funcion. 
+
+### Eventos en JavaScript 
+
+    los eventos juegan un papel importante en la creacion de paginas web interactivas, brindan la capcidad de responder acciones entre el usuario 
+
 # Retomando temas puntuales de JavaScrip para Typescript
 
 ## Seccion 2 
