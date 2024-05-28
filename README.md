@@ -1,3 +1,12 @@
+# Introduccion JavaScript 
+
+## Unidad 2 MInTic 
+
+### Funciones 
+
+    LLas funciones en JavaScript son bloques de codigo reutilizables, las cuales otorga un mejor nivel y eficiencia. 
+
+    - Una funcion se define como un conjunto de instrucciones logicamente ordenadas, para llevar a cabo una tarea espesifica 
 # Retomando temas puntuales de JavaScrip para Typescript
 
 ## Seccion 2 
@@ -103,6 +112,12 @@
             }
         }
     });
+
+    Pero que pasa si se requiere cambiar la constante message, si se hace lo siguiente:
+
+    setTimeout(() => {
+        message = 'Soy goku'
+    })
 
 
 
