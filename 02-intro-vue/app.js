@@ -9,8 +9,19 @@ const app = createApp ({
     //template literals
     template: `
         <h1>Hola mundo</h1>
+        <h2>{{ message }}</h2>
         <p> desde la app.js <p>
-    `
+    `,
+    //Variables reactivas - Inicio Composition Api
+    //Setup() => Funcion especial del ciclo de vida de los componentes 
+    setup(){
+
+        const message = "I'm Batman";
+
+        return{
+            message,
+        }
+    }
 });
 /* EStas lineas de codigo crea la aplicacion en vue */
-app.mount('#myApp')
+app.mount('#myApp');
