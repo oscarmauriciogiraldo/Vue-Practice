@@ -266,8 +266,140 @@
 
     aplicacion para gestionar una biblioteca de libros
 
+## Unidad 3 Interfaces - MinTic 
+
+### Introduccion 
+
+    - Gestion de formularios
+    - Validar los datos 
+    - Implementar validacion de formularios del lado del cliente
+    - validacion del lado del servidor 
+    - Manejo de eventos en los formularios 
+    - Librerias y frameworks
+    - desarrollo Frontend 
+
+### Gestion de formularios JS
+
+#### Introduccion 
+
+    Son una parte fundamental de casi todas las paginas web.
+
+    son los espacios donde se escribe infoirmacion, como nombre, y difernetes datos personales, cuando se quiere hacer parte de un sitio web o un juego en linea 
+
+    La gestion de formularios se refiere a cómo una compuadora o un pagina web recoge, verifica y utiliza esa informacion. Es como tener a alguien que que se asegure de que esa infoirmacion que pone en el formulario sea correcta y segura.
+
+    Ejemplo: 
+
+    si tenemos un campo para la edad, esta gestion se aseguraria de que se ponga un numero y no letras o simbolos extraños. Esta gestion tambien ayuda que la informacion se vaya al lugar correcto. 
+
+
+#### Elementos de formularios 
+
+    . Campos de texto: para escribir datos como nombre o correo electronico.
+
+    . casillas de verificacion: para elegir opciones como cuando se selcciona juegod facoritos
+
+    . Botones de opcion de una lista: cuando se elige una opcion en una lista 
+
+    . Botones: Para enviar o borrar la informacion que se ha escrito 
+
+#### La funcion de Js en los formularios 
+
+    Js es como el director de una pelicula que asegura que todos los actores (Elementos del formularios) hagan su trabajo correctamente.
+    JS controla lo que sucede con la informacion que pone en el formulario y como se maneja. 
+    Puede asegurarse de que la informacion sea correcta antes de enviarla, mostrar mensajes si algo esta mal y enviar la informacion al lugar correcto.
+
+#### Trabajando con formularios en JS 
+
+    Con js podemos hacer que los formuilarios sean aún más interactivos y útiles. Aquí algunas de las cosas que se pueden hacer 
+
+        - Validacion de formularios :
+            Se asegura de que la informacion que se pone en el formulario sea correcta. 
+            Por ejemplo: 
+            si en un campo se pone la edad js verifica que escribas un dato tipo numero y no letras, si algo esta mal puede mostrar un mensaje de error o alerta, que indique que se debe corregir
+
+        - Eventos de Formularios: 
+            Acciones que tiene el formulario.
+            ejemplo: 
+                dar clic en un boton para guardar la informacion 
+        - manejo de informacion
+            una vez la informacion este correcta y se hay aenviado correctamente js puede decidir que hacer con ella, se podria almacenar para usarla mas tarde. 
+            Tambien se podria almacenar a otra parte de la pagina web, para crear algo nuevo.
+
+#### Por que JS? 
+    
+    . js es un lenguaje de programcion diseñado para desarrollar paginas y aplicaciones web interactivas, permite crear respuestas en tiempo real en el navegador sin tener que recargar la pagina. 
+
+    . Es realmente util para los formularios, significa que podemos mostrar mensajes de error, inmiediatamente si algo está mal en lugar de tener que esperar que la pagina recargue. 
+    Tambien se pueden hacer cosas interesantes como ocultar y mostrar partes del formulario segun lo que el formulario hay ingresado, creando una expriencia mas dinamica e interactiva 
+
+
+### Uso de librerias y Frameworks 
+
+    VIRTUAL DOM
+
+    muchos datos con el dom real puede hacer lenta la pagina o la renderizacion de los elementos.
+    Con el virtual DOM, primero se hace en este el cambio, y despues se pasa al real y en este real solo se van a tener las actualizaciones reales que realmente se necesitaban 
+    
+    ### Uso de librerias y Frameworks:
+
+        Introduccion: 
+        Para entender lo que son las librerias y los frameworks en JS podemos pensar en la construccion de una casa.
+        Podria ser dificil y tomaria mucho tiempo tener que hacer cada ladrillo y cada mueble a mano. 
+        Por eso se compran los ladrillos hechos y muebles en una tienda.
+        En programacion las librerias y frameworks son como ladrillos y muebles ya hechos, son pedazos de codigo que alguien mas escribio.
+
+        ¿Que es una libreria?
+            es una coleccion de funciones y metodos que se pueden usar en un desarrollo propio, son como una caja de herramientas,llena de dichas ehrramientas que se utilizan para resolver problemas espesificos. 
+
+            ejemplo:
+            Se podria usar una libreria para crear graficos en tu web incluso graficos 3D con libreias de js como Threejs y babylonJs, sin tener que escribir el codigo desde cero.
+
+        ¿Que es un frameWork?
+            es un poco mas complejo que una librería, si las librerias son como una caja de herramientas, los frameworks son como una casa prefabricada.
+            proporciona una estructura basica para tu programa, junto con una conjuto de reglas sobre como deben hacer las cosas.
+            Esto permite centrarse en las partes únicas de tu programa, mimentras que el framework se encarga de los detalles generales.
+            Ejemplo:
+            un framework proporciona una forma estandar de organizar archivos.
+            de interactuar con bases de datos o de diseñar interfaz de usuario.
+        
+#### Como elegir una librerias o Frameworks?
+    
+    al igual que cuando se eligen los ladrillos y muebles para tu casa, importante elgir la libreria o el framework adecuado para tu proecto. estas son algunas que se deberian considerar
+
+    - Necesidades del proyecto: algunas son buenos para ciertos tipos de proyectos, pero no para otros. 
+    si se esta creando un juego se podria neceitar una libreria que sea buena para graficos y animaciones.
+
+    - Tqamaño y rendimiento :
+    Algunos son pensado y grandes, estos pueden relentizar tu pagina web, es importante elegir el mas ligero y rapido. 
+
+    - Comunidad y soporte: 
+    - Facilidad de aprendizaje
+
+
+### Introduccion: Desarrollo Front-End
+
+#### Que es el desarrollo front-end
+    
+    tambien es conociedo como desarrollo del lado del cliente
+
+    ¿Que hace un desarrolladro Front-end ?
+    es como el arquitecto y constructor del parque temaico, ellos crean y diseñan las atreacciones (Es decir las paginas web) para qeu sean interactivas y faciles de usar y accesibles para todos los visitantes. 
+
+    Esto implica la elecion de colores y diseños agradables a la vista, (Usando HTML y css) la creacion de interacciones interesantes y la respuesta a las acciones del usuario (con js)
+    y la garantia de que la pagina web se vea bien y funcione correctamente en una variedad de dispositivos y navegadores.
+ 
+
+
+
+
+
+
+
 
 # Retomando temas puntuales de JavaScrip para Typescript
+
+
 
 ## Seccion 2 
 
