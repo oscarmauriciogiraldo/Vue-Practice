@@ -4,7 +4,7 @@
 
 ### Funciones 
 
-    LLas funciones en JavaScript son bloques de codigo reutilizables, las cuales otorga un mejor nivel y eficiencia. 
+    Las funciones en JavaScript son bloques de codigo reutilizables, las cuales otorga un mejor nivel y eficiencia. 
 
     - Una funcion se define como un conjunto de instrucciones logicamente ordenadas, para llevar a cabo una tarea espesifica 
 
@@ -390,11 +390,153 @@
     y la garantia de que la pagina web se vea bien y funcione correctamente en una variedad de dispositivos y navegadores.
  
 
+#### Reta tu conocimiento.
+
+    1. lenguaje de programacion fundamental para la gestion de forms?
+
+        js
+
+    2. Cual es el objeto que se utiliza para acceder a los elementos individuales de un formulario en JS
+
+        document
+
+        // el otro dice que form
+
+    3. supongamos que tenemos un formulario con el siguiente campo de entrada:
+    <input type="text" id="nombre" name="nombre">
+    ¿Cómo podemos obtener el valor actual del campo de entrada utilizando js?
+
+        const valorNombre = document.getElementById('nombre').value
+
+    4. ¿Cual es la forma comun de evaluar si un campo de entrada esta vacio?
+
+        if(campo.validity.value.Missing)
+
+    5. Que herramienta se utiliza para asociar una funcion de controlador de enventos a un evento espesifico en js.
+
+        addEventListener
+
+#### Complemento desarrollo front
+
+    Complemento desarrollo front 
+
+    #### Index.html
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hola mundo Vue</title>
+        
+    </head>
+    <body>
+
+        <form id="miFormulario">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" placeholder="ingresa tu nombre" />
+
+            <label for="email">Nombre: </label>
+            <input type="email" id="email" placeholder="ingresa tu email" />
+
+            <button type="submit">enviar</button>
+            
+        </form>
+
+        //hay que tener en cuenta tambien el back para la construccion del formulario
+
+        <script src="app.js"></script>
+        
+    </body>
+    </html>
+
+    #### app.js
+
+    //Seleccionar el formulario
+    let formulario = document.getelementById('miFormulario');
+
+    //Escuchar el evento submit del formulario
+    formulario.addEventListener('submit', function(event){
+        //prevenir el comportamiento predeterminado del formulario
+        //hasta que el usuario no yene la informacion esta no se envia
+        event.preventDefault();
+
+        //Validacion del campo nombre
+        let nombre = document.getElementById('nombre').value
+        if(nombre === ""){
+            alert("el campo esta vacio.");
+            return;
+            //se pone retunr para 
+        }
+
+        //validacion del campo email usando una expresion regular
+        let email = document.getElmentByid('email').value;
+        let regex = /^[a-zA-Z0-9,_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if(!regex.text(email)){
+            alert("ingresa un correo valido")
+            return;
+        }
+
+        //envio del formulario con AJAX
+
+    });
+
+    // con AJAX se puede evitar que se recargue la pagina
 
 
+    //esta funcion da un request para enviar el formulario
+    //final mente lo envia, 
+    //Se crea el objeto de la solicitud
+    function enviarFomrularioConAjax(nombre email){
+
+        //Esta es la interface que se genera
+        let xhr = new XMLHttpRequest();
+
+        //procesar.py es la url o endpoint donde se envia la ifnormacion
+        xht.open('POST', 'procesar.py', true);
+        // el argumento true indica que la solicitud se hara asincornica, siginifica que el codigo js continuara ejecutandose mientras espera la respuesta del servidor
+
+        //se establecen las cabeceras cuando se envia la informacion 
+        //se define el tipo de contenido que se va a enviar 
+        //min estandar es decir que el formulario se va a enviar se codificara como un formulario tradicional
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function(){
+            if(this.status === 200){
+                console.log(this.responseTest)
+            }else{
+                console.log("error al enviar el codigo de estado", this.estatus)
+            }
+        }
+
+        xh.send('nombre= ' + nombre + '&email=' + email);
 
 
+    }
 
+#### API
+    interface de programacion de aplicaciones
+    posibilita la comunicacion entre dos aplicaciones: usuario servidor 
+    back front, vista servicio etc.
+    la aplicacion que envia la solicitud se llama cliente, y la que envia la respuesta se llama servidor.
+
+
+## Unidad 4 Desarrollo de aplicativos web MInTic 
+### Diseño Responsivo
+
+### Reto de conocimiento unidad 4
+
+    -que es el diseño responsivo en el desarrollo web 
+        es una tecnica para diseñar sitios web que se adapten y respondan de manera optima a diferentes dispoisitivos y tamaños de pantallas 
+    
+    - por que es importante el diseño responsivo en el desarrollo web?
+        Mejora el rendimiento y la optimizacion de sitios web
+
+    - Cual de las siguientes tecnicas se utiliza en el diseño responsivo 
+        media queries
+    
+    - Que unidad de medida es recomendsable utilizar para el diseño responsivo
+        porcentajes
 
 
 # Retomando temas puntuales de JavaScrip para Typescript
