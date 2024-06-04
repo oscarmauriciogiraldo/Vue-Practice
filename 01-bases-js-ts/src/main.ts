@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg'
 //import "./bases/02-object"
 //import "./bases/03-arrays"
 //import "./bases/04-functions"
-import "./bases/11-axios"
+import "./bases/12-async-await"
 /*import "./bases/07-desestructuracionArreglos"
 import "./bases/08-importacionesExport"
 import "./bases/09-tipadoDatos"
