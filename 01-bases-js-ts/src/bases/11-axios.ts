@@ -19,4 +19,4 @@ defaul o exportar como tal la constante */
 
 giphyApi.get('/random')
     .then( resp => console.log(resp))
-    .catch( err => console.log(err) )
+    .catch( err => console.log(err) );
