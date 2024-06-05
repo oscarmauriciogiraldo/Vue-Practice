@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo Vue</title>
+    
+</head>
+<body>
+
+    <div class="container-vue">
+        <div class="containerTitle">
+            <h1>Vue Practices</h1>
+        </div>
+        <div class="cntainerApp" id="myApp">
+            <!-- en este div va a vivir la aplicacion  -->
+            {{ text }}
+        </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script>
+        //app de vue 
+        //Sintaxis basica 
+        const vm = Vue.createApp({
+            //optios api
+            /**
+                OPTIONS API 
+                ejercicio :
+                cambiarlo por composition api
+             */
+            data(){
+                return{
+                    text: 'Hola vue'
+                }
+            }
+        }).mount('#myApp')
+    </script>
+
+    
+</body>
+</html>

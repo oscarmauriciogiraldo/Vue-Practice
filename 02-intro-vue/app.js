@@ -1,25 +1,44 @@
 /**
  * @description hola mundo en vue
+ * Este ola mundo es progresivo, se utiliza un cdn 
+ * solamente para que algunos componentes o algunas secciones de mi Html 
+ * utilicen VUE
  * @argument createapp -> Cre ana app en vue 
  * @argument ref -> crea variables reactivas
  */
 const {createApp, ref} = Vue;
 
+
+//Componente
 const app = createApp ({
     //template literals
     template: `
         <h1>Hola mundo</h1>
         <h2>{{ message }}</h2>
+        <h2>{{ author }}</h2>
+
         <p> desde la app.js <p>
     `,
     //Variables reactivas - Inicio Composition Api
     //Setup() => Funcion especial del ciclo de vida de los componentes 
     setup(){
 
-        const message = "I'm Batman";
+        //const message = "I'm Batman";
+        //Esto crea la variable reactiva
+        const message = ref("I'm Batman");
+        const author = ref('Bruce Wayne');
+
+        /* Ejercicio
+        Author : bruce wane  */
+
+        setTimeout(()=>{
+            message.value = 'Soy Goku';
+            author.value = 'Kakaroto;'
+        }, 1500);
 
         return{
             message,
+            author,
         }
     }
 });
