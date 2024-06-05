@@ -14,6 +14,16 @@
         </div>
         <div class="cntainerApp" id="myApp">
             <!-- en este div va a vivir la aplicacion  -->
+            <!-- Separar el html del js -->
+            <h1>{{message}}</h1>
+            <blockquote>{{ author }}</blockquote>
+
+            <!-- Cambiar el evento -->
+            <!-- Se puede mandar como referencia la funcion 
+            v-on:click=""-->
+            <button v-on:click="changequote">Cambiar mensaje</button>
+
+            <!-- Forma corta -->
         </div>
     </div>
 

@@ -12,13 +12,13 @@ const {createApp, ref} = Vue;
 //Componente
 const app = createApp ({
     //template literals
-    template: `
+    /* template: `
         <h1>Hola mundo</h1>
         <h2>{{ message }}</h2>
         <h2>{{ author }}</h2>
 
         <p> desde la app.js <p>
-    `,
+    `, */
     //Variables reactivas - Inicio Composition Api
     //Setup() => Funcion especial del ciclo de vida de los componentes 
     setup(){
@@ -28,17 +28,29 @@ const app = createApp ({
         const message = ref("I'm Batman");
         const author = ref('Bruce Wayne');
 
+        //Funcion
+        /**
+         * @description: se debe exportar la funcion 
+         * em el return
+         */
+        const changequote = () => {
+            message.value = 'Hola, soy goku'
+            author.value = 'Kakaroto;'
+            
+        }
+
         /* Ejercicio
         Author : bruce wane  */
 
-        setTimeout(()=>{
+        /* setTimeout(()=>{
             message.value = 'Soy Goku';
             author.value = 'Kakaroto;'
-        }, 1500);
+        }, 1500); */
 
         return{
             message,
             author,
+            changequote,
         }
     }
 });
