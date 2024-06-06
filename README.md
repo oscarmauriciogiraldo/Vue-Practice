@@ -654,6 +654,22 @@ https://vscode.dev/tunnel/laptop-pp7aves1/c:/Users/Oscar/Documents/CursoVueDeCer
         message = 'Soy goku'
     })
 
+## Section 4
+
+### Temas Puntuales de la sección
+
+    - Composition Api
+    - Script Setup
+    - Define component
+    - Single file Components
+    - Separacion de Logica
+    - Composables 
+    - build de Producion
+    - Despliegue a produccion 
+    - Manejo de Estilos
+        . Globales 
+        . Bootstrap
+        . Tailwind
 
 
 

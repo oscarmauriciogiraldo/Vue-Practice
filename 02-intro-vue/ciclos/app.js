@@ -62,7 +62,8 @@ const app = createApp({
             pero no deberia de serlo por que los quotes tienen una estructura
             ya que tiene la frase y el author, por lo que es mejor hacer esta 
             desestructuracioon */
-            quotes.value.unshift({quote: newMessage.value, author: 'Oscar Giraldo'})
+            quotes.value.unshift({quote: newMessage.value, author: 'Oscar Giraldo'});
+            newMessage.value = '';
         }
 
 
