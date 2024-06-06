@@ -671,6 +671,10 @@ https://vscode.dev/tunnel/laptop-pp7aves1/c:/Users/Oscar/Documents/CursoVueDeCer
         . Bootstrap
         . Tailwind
 
+### componente tradicional 
+
+    Composable fuctions
+    estos son mu parecidos a los hooks en react 
 
 
 
