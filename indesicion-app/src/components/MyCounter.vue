@@ -7,9 +7,10 @@ sfc -->
     <!-- <h1>Hola Vue</h1> -->
     <!-- Eventos y estados -->
     <section>
-        <h3>counter: {{ counter }}</h3>
+        <h1>Counter script setup</h1>
+        <!-- <h3>counter: {{ counter }}</h3>
         <h3>Square: {{ 10 * 10 }}</h3>
-        <h3>Square2: {{ counter * counter }}</h3>
+        <h3>Square2: {{ counter * counter }}</h3> -->
         <h3>Square3: {{ squareCounter }}</h3>
 
         <div>

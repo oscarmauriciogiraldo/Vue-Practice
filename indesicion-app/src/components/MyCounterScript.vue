@@ -2,6 +2,8 @@
 <template>
     
     <section>
+
+        <h1>Counter script setup tradicional</h1>
         
         <h3>Square my counterscript: {{ squareCounter }}</h3>
 
