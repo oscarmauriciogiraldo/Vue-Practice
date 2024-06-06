@@ -25,7 +25,19 @@
 
             
 
-            <h2>batman quotes {{ quotes.length}}</h2>
+            <!-- <h2>batman quotes {{ quotes.length}}</h2> -->
+            <h2>batman quotes {{ totalQuotes }}</h2>
+
+            <!--  y si ahora en vez de aumentar por el boton 
+            si no por un input -->
+            <input 
+                type="text" 
+                placeholder="add quote"
+                @keypress.enter="aaddQuote"
+            >
+            <!-- modificadores .enter -->
+
+
             <hr>
 
             <!-- <button v-on:click="toggleAuthor">Toggel Author</button> -->
@@ -35,8 +47,9 @@
             <!-- <button @click="showAuthor.value = !showAuthor.value">Toggel Author</button> -->
             <!-- No es neceario poner el .value, por que vue ya sabe que se esta apuntando a ese valor -->
             <button @click="showAuthor = !showAuthor">Toggel Author</button>
+
             <!-- Este creara una nueva frase -->
-            <button @click="aaddQuote">Add Quote</button>
+            <!-- <button @click="aaddQuote">Add Quote</button> -->
             <!-- Pero esto no funciona de cierta manera, por que en consola el objeto
             si crese, pero el tamaño y loq ue se muestra en el html sigue siendo el mismo
             esta variable tendria qeu ser reactiva -->

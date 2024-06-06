@@ -17,7 +17,7 @@ const originalQuotes = [
  * estas son entonces variables reactivas, lo 
  * cual le permite tener mas control a vue
  */
-const {createApp, ref} = Vue;
+const {createApp, ref, computed} = Vue;
 
 
 const app = createApp({
@@ -32,6 +32,17 @@ const app = createApp({
 
         //Variable reactiva
         const quotes = ref(originalQuotes)
+
+        //Propiedades computadas
+        const totalQuotes = computed(() => {
+            /* vue es lo suficientemente inteligente 
+            para determinar que aca adentro si se hizo algun 
+            cambio en algun valor reactivo el se va a dar cuenta y volvera 
+            a procesar el computed por el desarrollador */
+            return quotes.value.length;
+
+            //forma corta
+        });
 
         //Primera forma
         const toggleAuthor = () => {
@@ -57,6 +68,7 @@ const app = createApp({
             showAuthor,
             toggleAuthor,
             aaddQuote,
+            totalQuotes,
         }
     }
 });
