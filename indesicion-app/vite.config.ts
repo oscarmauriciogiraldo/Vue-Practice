@@ -16,3 +16,7 @@ export default defineConfig({
     }
   }
 })
+
+/* Archivo de configuracion 
+en el fondo la app esta construida con vite
+ */
