@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo Vue</title>
+    
+</head>
+<body>
+
+    <div class="container-vue">
+        <div class="containerTitle">
+            <h1>Vue Practices 2 - ciclos</h1>
+        </div>
+        <div class="cntainerApp" id="myApp">
+            <!-- en este div va a vivir la aplicacion  -->
+            <!-- Separar el html del js -->
+            <!-- <h1>{{message}}</h1>
+            <blockquote>{{ author }}</blockquote> -->
+
+            <!-- Cambiar el evento -->
+            <!-- Se puede mandar como referencia la funcion 
+            v-on:click=""-->
+            <!-- <button v-on:click="changequote">Cambiar mensaje</button> -->
+
+            
+
+            <!-- <h2>batman quotes {{ quotes.length}}</h2> -->
+            <h2>batman quotes {{ totalQuotes }}</h2>
+
+            <!--  y si ahora en vez de aumentar por el boton 
+            si no por un input -->
+            <input 
+                type="text" 
+                placeholder="add quote"
+                @keypress.enter="aaddQuote"
+                v-model="newMessage"
+            >
+            <!-- modificadores .enter -->
+
+            <br>
+            <br>
+
+
+            <hr>
+
+            <!-- <button v-on:click="toggleAuthor">Toggel Author</button> -->
+            <!-- Forma corta -->
+            <!-- <button @click="toggleAuthor">Toggel Author</button> -->
+            <!-- Segunda forma -->
+            <!-- <button @click="showAuthor.value = !showAuthor.value">Toggel Author</button> -->
+            <!-- No es neceario poner el .value, por que vue ya sabe que se esta apuntando a ese valor -->
+            <button @click="showAuthor = !showAuthor">Toggel Author</button>
+
+            <!-- Este creara una nueva frase -->
+            <!-- <button @click="aaddQuote">Add Quote</button> -->
+            <!-- Pero esto no funciona de cierta manera, por que en consola el objeto
+            si crese, pero el tamaño y loq ue se muestra en el html sigue siendo el mismo
+            esta variable tendria qeu ser reactiva -->
+
+
+            <ul>
+
+                <!-- Desestructurar este objeto para no tener conflictos
+                con la variable -->
+                <!-- <li v-for="quote in quotes">
+                    {{ quote.author }}
+                </li> -->
+                <li v-for="({quote, author}, index) in quotes">
+                    <span>{{ index + 1}} - {{ quote }}</span>
+
+                    <!-- Directivas v-if y v-show -->
+                    <blockquote v-if="showAuthor">{{ author }}</blockquote>
+                    <!-- Con el vi-show lo que hace es que modifica el estilo 
+                    y le pone a este el display none.
+                    Sin embargo con el v-show, el elemento no se destruye por ende no 
+                    se dispara el ciclo de construccion del componente -->
+                </li>
+                <!-- Y si quiero mostrar el indice  -->
+
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

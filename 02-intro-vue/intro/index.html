@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo Vue</title>
+    
+</head>
+<body>
+
+    <div class="container-vue">
+        <div class="containerTitle">
+            <h1>Vue Practices</h1>
+        </div>
+        <div class="cntainerApp" id="myApp">
+            <!-- en este div va a vivir la aplicacion  -->
+            <!-- Separar el html del js -->
+            <h1>{{message}}</h1>
+            <blockquote>{{ author }}</blockquote>
+
+            <!-- Cambiar el evento -->
+            <!-- Se puede mandar como referencia la funcion 
+            v-on:click=""-->
+            <button v-on:click="changequote">Cambiar mensaje</button>
+
+            <!-- Forma corta -->
+        </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
