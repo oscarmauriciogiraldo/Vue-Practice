@@ -8,14 +8,16 @@ sfc -->
     <!-- Eventos y estados -->
     <section>
         <h1>Counter script setup</h1>
-        <!-- <h3>counter: {{ counter }}</h3>
+        <h1>componente myCounter</h1>
+        <h3>counter 1: {{ counter }}</h3>
+        <!-- 
         <h3>Square: {{ 10 * 10 }}</h3>
         <h3>Square2: {{ counter * counter }}</h3> -->
         <h3>Square3: {{ squareCounter }}</h3>
 
         <div>
-            <button @click="counter++"> + 1 </button>
-            <button @click="counter--"> - 1 </button>
+            <button class="btn" @click="counter++"> + 1 </button>
+            <button class="btn" @click="counter--"> - 1 </button>
         </div>
     </section>
 </template>
@@ -25,7 +27,10 @@ entonces ctrl shif y reload  -->
 <!-- Forma corta para decir que se 
     trabaja con composition api -->
 <script lang="ts" setup>
-    import { computed, ref } from 'vue';
+    import { useCounter } from '../composables/useCounter';
+
+    const { counter, squareCounter } = useCounter();
+    //import { computed, ref } from 'vue';
 
      /* recibir informacion padre Hijo */
     /* const props = defineProps({
@@ -36,19 +41,19 @@ entonces ctrl shif y reload  -->
         value: number;
     }>(); */
     /* o con interface */
-    interface Props{
+    /* interface Props{
         value: number;
     }
 
-    const props = defineProps<Props>();
+    const props = defineProps<Props>(); */
 
 
     /* Basado en el counter puedo saber cual es el valor cuadrado */
     //se define una variable reactiva
-    const counter = ref(props.value)
+    /* const counter = ref(props.value)
 
     //Propiedad computada para calcular el squere
-    const squareCounter = computed(() => counter.value * counter.value)
+    const squareCounter = computed(() => counter.value * counter.value) */
 
     /* console.log('hola mundo'); */
    
@@ -58,7 +63,11 @@ entonces ctrl shif y reload  -->
 <!-- scoped  es solo para aplicar estos estilos 
     a este componente  -->
 <style scoped>
-    h1{
+    h3{
         color: green;
+    }
+
+    .btn{
+        @apply p-5 bg-blue-500 rounded hover:bg-blue-700 mr-2;
     }
 </style>

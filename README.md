@@ -674,7 +674,11 @@ https://vscode.dev/tunnel/laptop-pp7aves1/c:/Users/Oscar/Documents/CursoVueDeCer
 ### componente tradicional 
 
     Composable fuctions
-    estos son mu parecidos a los hooks en react 
+    estos son mu parecidos a los hooks en react.
+
+    Estos composables devuelven solo las partes del 
+    componente que se van a a utilizar, es decir proporciona la 
+    logica que se necesita para el compoenente, per este no incluye 
 
 
 
