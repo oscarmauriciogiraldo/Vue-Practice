@@ -15,15 +15,22 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent, ref, computed } from 'vue';
+    import { useCounter } from '@/composables/useCounter';
+import { defineComponent, ref, computed } from 'vue';
     export default defineComponent({
         props: {
             value : {type: Number, required: true}
         },
 
         setup(props){
-            const counter = ref(props.value);
-            const squareCounter = computed( () => counter.value * counter.value);
+
+            //logica resumida en un composable
+        const { counter, squareCounter } = useCounter(props.value);
+
+
+            //ahora esta logica se resume
+            //const counter = ref(props.value);
+            //const squareCounter = computed( () => counter.value * counter.value);
 
             return{
                 counter,

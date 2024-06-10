@@ -29,7 +29,13 @@ entonces ctrl shif y reload  -->
 <script lang="ts" setup>
     import { useCounter } from '../composables/useCounter';
 
-    const { counter, squareCounter } = useCounter();
+    interface Props{
+        value: number;
+    }
+
+    const props = defineProps<Props>();
+
+    const { counter, squareCounter } = useCounter(10);
     //import { computed, ref } from 'vue';
 
      /* recibir informacion padre Hijo */

@@ -7,7 +7,10 @@ import { computed, ref } from "vue";
  * manejar la logica del counter, en este caso 
  * myCounter
  */
-export const useCounter = () => {
+    //utilizar el initial value como una interfaz
+//export const useCounter = (initialValue: number)
+
+export const useCounter = (initialValue: number = 5) => {
 
     /**
      * @description: ppropiedades reactivas 
@@ -15,7 +18,7 @@ export const useCounter = () => {
      * no se replique tanto la logica.
      * prop se recibe como argumento
      */
-    const counter = ref(5)
+    const counter = ref(initialValue)
     //Propiedad computada para calcular el squere
     const squareCounter = computed(() => counter.value * counter.value)
 
